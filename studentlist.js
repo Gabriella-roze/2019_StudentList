@@ -105,14 +105,14 @@ function addEventListeners() {
 
 // Get JSON of students
 function getJSON() {
-  return fetch("http://petlatkea.dk/2019/hogwarts/students.json")
+  return fetch("https://petlatkea.dk/2019/hogwarts/students.json")
   .then(res => res.json())
   .then(data => data);
 }
 
 // Get JSON of blood lines
 function getBloodJSON() {
-  return fetch("http://petlatkea.dk/2019/hogwarts/families.json")
+  return fetch("https://petlatkea.dk/2019/hogwarts/families.json")
     .then(res => res.json())
     .then(data => data);
 }
