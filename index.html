@@ -3,20 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student List 2</title>
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Homemade+Apple" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="studentlist.css" type="text/css">
     <title>Hogwarts Student List</title>
 </head>
 
 <body>
     <h1>Students of Hogwarts</h1>
-
-    <p>Students in total: <span id="totalNr">0</span></p>
-    <p>Expelled students: <span id="expelledNr">0</span></p>
-    <p>Students in Hufflepuff: <span id="totalHuffNr">0</span></p>
-    <p>Students in Gryffindor: <span id="totalGryfNr">0</span></p>
-    <p>Students in Ravenclaw: <span id="totalRaveNr">0</span></p>
-    <p>Students in Slytherin: <span id="totalSlytNr">0</span></p>
+    <div id="stats">
+      <p>Students in total: <span id="totalNr" class="stats__numbers">0</span></p>
+      <p>Expelled students: <span id="expelledNr" class="stats__numbers">0</span></p>
+      <p>Students in Hufflepuff: <span id="totalHuffNr" class="stats__numbers">0</span></p>
+      <p>Students in Gryffindor: <span id="totalGryfNr" class="stats__numbers">0</span></p>
+      <p>Students in Ravenclaw: <span id="totalRaveNr" class="stats__numbers">0</span></p>
+      <p>Students in Slytherin: <span id="totalSlytNr" class="stats__numbers">0</span></p>
+      <p>Expelled: <span id="expelledNr" class="stats__numbers">0</span></p>
+    </div>
+    
 
     <div class="filter-section">
       <p>Show: </p>
@@ -26,8 +32,8 @@
       <button id="filterSlytherin">Slytherin</button>
       <button id="all">All</button>
     </div>
-<p>Expelled: <span id="expelledNr">0</span></p>
-    <div id="sort-section">
+
+    <div id="sort-section" class="filter-section">
         <p>Sort by:</p>
         <button id="sort-firstname">First name</button>
         <button id="sort-lastname">Last name</button>
@@ -38,10 +44,19 @@
     </section>
 
     <div id="modal">
+  <div class="container">
       <img src="" alt="image of the student">
-      <h1>Name and Last name</h1>
-      <h2>House</h2>
+      
+          <h1>Name and Last name</h1>
+          <h2>House</h2>
+          <h3>Blood status</h3>
+          <p><i class="fas fa-hat-wizard"></i> <span id="squad_status"></span></p>
+          <button>Add to Inquisitorial Squad</button>
+      </div>
+          
     </div>
+      
+
 
     <template>
         <div class="card">
@@ -50,7 +65,7 @@
             <h4 id="lastName">Last name</h4>
             <img id="img-house" src="" alt="Logo of the house">
             <h4 id="house">House</h2>
-            <button>Expel!</button>
+            <button><i class="fas fa-ban"></i></button>
         </div>
     </template>
     
